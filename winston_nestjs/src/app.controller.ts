@@ -10,7 +10,9 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    this.logger.log('Calling getHello()');
+    this.logger.log('Info level log');
+    this.logger.error('Error level log');
+    this.logger.warn('Warning level log');
     return this.appService.getHello();
   }
 }
